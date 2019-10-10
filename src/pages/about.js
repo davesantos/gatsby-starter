@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
@@ -16,7 +15,6 @@ const SecondPage = () => (
     <SEO title="About" />
 
     <Test>Hi from the second page</Test>
-    <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
 
