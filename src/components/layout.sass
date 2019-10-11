@@ -1,3 +1,32 @@
 
+@media screen and (min-width: 320px)
+  \:root
+    font-size: calc(16px + (24 - 16) * (100vw - 320px)/(1600 - 320))
+    line-height: 1.5
+
+@media screen and (min-width: 1000px)
+  \:root
+    font-size: 22px
+
+a
+  text-decoration: none
+
+img, video, object, embed
+  max-width: 100%
+  height: auto !important
+
+img
+  -ms-interpolation-mode: bicubic
+  vertical-align: middle
+
+
 body
   font-family: sans-serif
+
+#gatsby-focus-wrapper
+  display: flex
+  flex-direction: column
+  height: 100vh
+
+main
+  flex-grow: 1
