@@ -3,9 +3,7 @@ import React from "react"
 import styled from "styled-components"
 
 const TheSection = styled.section`
-
   width: 100%;
-
 `
 
 const Section = ({children}) => (

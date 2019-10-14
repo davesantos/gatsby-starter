@@ -4,18 +4,24 @@ import React from "react"
 
 import Nav from "./Nav"
 
+import styled from "styled-components"
+
+const TheHeader = styled.header`
+
+  display: flex
+
+`
+
 const Header = ({ siteTitle }) => (
 
-  <header>
+  <TheHeader>
       <h1>
         <Link to="/" >
           {siteTitle}
         </Link>
       </h1>
-
       <Nav />
-
-  </header>
+  </TheHeader>
 )
 
 Header.propTypes = {
