@@ -3,10 +3,12 @@ module.exports = {
     title: `Dave Santos`,
     description: `Graphic Designer based in Los Angeles`,
     author: `@davesantos`,
+    url: `https://davesantos.com`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-root-import`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
