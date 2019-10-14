@@ -1,7 +1,6 @@
 import React from "react"
 
-import { Layout, SEO, Section } from "src/components"
-import Image from "src/components/image"
+import { Layout, SEO, Section, Image } from "src/components"
 
 const IndexPage = () => (
   <Layout>
