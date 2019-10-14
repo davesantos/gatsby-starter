@@ -1,5 +1,5 @@
-import PropTypes from "prop-types"
 import React from "react"
+import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
@@ -9,8 +9,6 @@ const Href = styled(Link)`
 const TheNav = styled.nav`
   display: flex;
 `
-
-
 
 const Nav = () => (
   <TheNav>
