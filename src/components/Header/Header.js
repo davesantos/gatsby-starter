@@ -1,21 +1,27 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
 
 import Nav from "./Nav"
 
-import styled from "styled-components"
 
 const TheHeader = styled.header`
-
   display: flex
-
 `
+
+const TheStyle = {
+
+  fontSize: "inherit",
+  fontWeight: "normal",
+  margin: 0
+
+}
 
 const Header = ({ siteTitle }) => (
 
   <TheHeader>
-      <h1>
+      <h1 style={TheStyle}>
         <Link to="/" >
           {siteTitle}
         </Link>
