@@ -3,7 +3,10 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const Href = styled(Link)`
-  padding: 1em;
+  padding-right: 1em;
+  :last-child {
+    padding: 0
+  }
 `
 const TheNav = styled.nav`
   display: flex;
