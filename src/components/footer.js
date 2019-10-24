@@ -7,20 +7,18 @@ const TheFooter = styled.footer`
   margin-bottom: 1.5em;
 `
 
+const year = new Date().getFullYear()
+
 const Footer = ({ siteTitle }) => (
 
   <TheFooter>
-    All images and works © {new Date().getFullYear()} {siteTitle}
+    All images and works © {year} {siteTitle}
   </TheFooter>
 
 )
 
 Footer.propTypes = {
   siteTitle: PropTypes.string,
-}
-
-Footer.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Footer
