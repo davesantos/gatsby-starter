@@ -9,6 +9,8 @@ import Nav from "./Nav"
 const TheHeader = styled.header`
   display: flex;
   justify-content: space-between;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 `
 
 const TheStyle = {
