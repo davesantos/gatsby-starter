@@ -9,7 +9,6 @@ const IndexPage = () => (
       <h1>This is section</h1>
     </Section>
     <Project />
-    <Image />
   </Layout>
 )
 
