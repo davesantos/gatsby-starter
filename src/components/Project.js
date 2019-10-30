@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Section, Image } from "src/components"
+import { Section } from "src/components"
 
 const Project = () => (
 

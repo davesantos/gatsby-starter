@@ -8,10 +8,7 @@ const TheSection = styled.section`
 
 const Section = ({children}) => (
   <TheSection>
-    <article>
-      <h2>This is section!</h2>
-      {children}
-    </article>
+    {children}
   </TheSection>
 )
 
