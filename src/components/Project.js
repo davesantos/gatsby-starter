@@ -22,7 +22,6 @@ const Project = () => {
   return (
 
   <Section>
-    This is project!
     <Img fluid={data.placeholderImage.childImageSharp.fluid} />
   </Section>
 
