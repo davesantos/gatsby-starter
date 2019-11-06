@@ -1,15 +1,21 @@
 import React from "react"
 
-import { Layout, SEO, Project, Section } from "src/components"
+import {
+  Layout,
+  QueryImage,
+  Section,
+  SEO,
+} from "src/components"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Section background="#ff0000">
-      <h1>This is section</h1>
+    <Section>
+
+    <QueryImage name="refract" width={300} />
+
     </Section>
-    <Project />
-  </Layout>
+    </Layout>
 )
 
 export default IndexPage
