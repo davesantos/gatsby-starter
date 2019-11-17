@@ -14,7 +14,7 @@ const QueryImage = ({ name, ...props }) => (
 							relativePath
 							name
 							childImageSharp {
-								fluid(maxWidth: 600) {
+								fluid(maxWidth: 1080) {
 									...GatsbyImageSharpFluid_noBase64
 								}
 							}

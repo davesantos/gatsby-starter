@@ -1,20 +1,12 @@
 import React from "react"
-import styled from "styled-components"
-
 import { Layout, SEO } from "src/components"
 
-
-const Test = styled.h1`
-
-color: red;
-
-`
-
 const SecondPage = () => (
+
   <Layout>
     <SEO title="About" />
-
-    <Test>Hi from the second page</Test>
+    <h1>Who + Why</h1>
+    <p>Multidisciplinary designer based in Los Angeles working on graphic design, illustration, branding, web design and development </p>
   </Layout>
 )
 

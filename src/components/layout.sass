@@ -8,6 +8,25 @@
   \:root
     font-size: 22px
 
+*
+  box-sizing: border-box
+
+body
+  opacity: 0
+  font-family: "aktiv-grotesk", sans-serif
+
+.wf-active body
+  opacity: 1
+
+#gatsby-focus-wrapper
+  display: flex
+  flex-direction: column
+  height: 100vh
+  // align-items: center
+
+h1, h2, h3, h4
+  font-family: "aktiv-grotesk-extended", sans-serif
+
 a
   text-decoration: none
 
@@ -20,13 +39,10 @@ img
   vertical-align: middle
 
 
-body
-  font-family: sans-serif
-
-#gatsby-focus-wrapper
-  display: flex
-  flex-direction: column
-  height: 100vh
-
-main
+main, header, footer
   flex-grow: 1
+  width: 100%
+  margin: 0 auto
+  max-width: 1320px
+  padding-left: 0.3em
+  padding-right: 0.3em
