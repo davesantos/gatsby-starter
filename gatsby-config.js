@@ -13,9 +13,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        custom: {
-          families: ['Gooper'],
-          urls: ['fonts.css']
+        typekit: {
+          id: 'qgh3pst'
         }
       }
     },
