@@ -5,6 +5,7 @@ import styled from "styled-components"
 const TheFooter = styled.footer`
   margin-top: 1.5em;
   margin-bottom: 1.5em;
+  opacity: .25;
 `
 
 const year = new Date().getFullYear()
