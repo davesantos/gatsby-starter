@@ -16,9 +16,18 @@ const OneCol = styled.div`
 
 `
 
+const Cover = styled.section`
+
+  padding: 5em
+
+
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+
+    <Cover>Hello bio.</Cover>
 
     <Grid>
     <OneCol>
