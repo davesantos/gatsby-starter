@@ -1,29 +1,19 @@
 import React from "react"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
-import { Section } from "src/components"
 
-const Project = () => {
+const ProjectWrap = styled.section`
 
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1320) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  margin-bottom: 3em;
+`
+
+const Project = ({children}) => {
 
   return (
 
-  <Section>
-    <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-  </Section>
+  <ProjectWrap>
+    {children}
+  </ProjectWrap>
 
   )
 
