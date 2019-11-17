@@ -23,6 +23,10 @@ const Cover = styled.section`
 
 `
 
+const Desc = styled.p`
+  color: #bbb;
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -38,7 +42,7 @@ const IndexPage = () => (
     </OneCol>
     </Grid>
 
-    <p>Album artwork for Tomorrow's Tulips pressed and printed on Burger Records label. I designed the entire LP sleeve and inside slips with accompanying photography and painting by Alex Knost.</p>
+    <Desc>Album artwork for Tomorrow's Tulips pressed and printed on Burger Records label. I designed the entire LP sleeve and inside slips with accompanying photography and painting by Alex Knost.</Desc>
 
     <Project tag="website">
     Website for Dominic Santos. Designed with a mobile-centric experience for Instagram majority traffic.
