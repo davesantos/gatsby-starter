@@ -12,7 +12,7 @@ const year = new Date().getFullYear()
 const Footer = ({ siteTitle }) => (
 
   <TheFooter>
-    All images and works © {year} {siteTitle}
+    <small>All images and works © {year} {siteTitle}</small>
   </TheFooter>
 
 )

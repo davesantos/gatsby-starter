@@ -1,9 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+
 
 import { Header, Footer } from "src/components"
-
 import "normalize.css"
 import "src/components/layout.sass"
 
