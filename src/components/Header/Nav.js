@@ -11,11 +11,16 @@ const Href = styled(Link)`
 const TheNav = styled.nav`
   display: flex;
 `
+const aStyle = {
+
+  color: "green"
+
+}
 
 const Nav = () => (
   <TheNav>
-    <Href to="/">Home</Href>
-    <Href to="about">About</Href>
+    <Href to="/" activeStyle={aStyle}>Home</Href>
+    <Href to="/about" activeStyle={aStyle}>About</Href>
   </TheNav>
 )
 
