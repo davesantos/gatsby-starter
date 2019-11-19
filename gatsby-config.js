@@ -33,7 +33,38 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `${__dirname}/src/posts`,
+				name: 'posts',
+			},
+		},
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
+    {
+  		resolve: `gatsby-transformer-remark`,
+  		options: {
+  			plugins: [
+  				{
+  					resolve: `gatsby-remark-images`,
+  					options: {
+  						backgroundColor: 'transparent',
+  						maxWidth: 1080,
+  						linkImagesToOriginal: false,
+  					},
+  				},
+  				{
+  					resolve: `gatsby-remark-prismjs`,
+  					options: {
+  						aliases: { js: 'javascript', html: 'markup' },
+  						noInlineHighlight: true,
+  					},
+  				},
+  				`gatsby-remark-smartypants`
+  			],
+  		},
+  	},
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -46,6 +77,12 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+			resolve: `gatsby-plugin-google-analytics`,
+			options: {
+				trackingId: '',
+			},
+		},
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
