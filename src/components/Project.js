@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Grid } from "components"
 
 
 const ProjectWrap = styled.section`
@@ -12,7 +13,9 @@ const Project = ({children}) => {
   return (
 
   <ProjectWrap>
-    {children}
+    <Grid>
+      {children}
+    </Grid>
   </ProjectWrap>
 
   )
