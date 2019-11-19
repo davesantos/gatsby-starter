@@ -23,7 +23,7 @@ const IndexPage = ({data}) => {
   <Layout>
     <SEO title="Home" />
 
-    <Cover>Hello bio.</Cover>
+    <Cover>I am a Los Angeles based designer specializing in graphic design, illustration, brand identity, web design and development.</Cover>
 
     <Project tag="print">
       <Item position="1 /span 3">
@@ -36,6 +36,8 @@ const IndexPage = ({data}) => {
 
       <Item>
         <Desc>Album artwork for Tomorrow's Tulips pressed and printed on Burger Records label. I designed the entire LP sleeve and inside slips with accompanying photography and painting by Alex Knost.</Desc>
+
+        <a href="/experimental-jelly">More</a>
       </Item>
     </Project>
 
