@@ -7,9 +7,16 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-root-import`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    {
+      resolve: "gatsby-plugin-root-import",
+      options: {
+        src: `${__dirname}/src`,
+        components: `${__dirname}/src/components`,
+        utils: `${__dirname}/src/utils`
+      }
+    },
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
