@@ -5,21 +5,9 @@ import {
   Layout,
   Project,
   QueryImage,
+  Item,
   SEO,
-  Grid,
 } from "src/components"
-
-
-const Item = styled.div`
-
-  grid-column: 1 / -1;
-
-  @media only screen and (min-width: 768px) {
-    grid-column: ${props => props.position || "2 / span 4" };
-  }
-  @media only screen and (min-width: 1030px)
-  @media only screen and (min-width: 1240px)
-`
 
 const Cover = styled.section`
   padding: 5em
@@ -29,66 +17,62 @@ const Desc = styled.p`
   color: #bbb;
 `
 
-const IndexPage = () => (
+const IndexPage = ({data}) => {
+
+  return (
   <Layout>
     <SEO title="Home" />
 
     <Cover>Hello bio.</Cover>
 
     <Project tag="print">
-      <Grid>
+      <Item position="1 /span 3">
+        <QueryImage name="we_render_1" />
+      </Item>
 
-        <Item position="1 /span 3">
-          <QueryImage name="we_render_1" />
-        </Item>
+      <Item position="span 3">
+        <QueryImage name="we_render_1" />
+      </Item>
 
-        <Item position="span 3">
-          <QueryImage name="we_render_1" />
-        </Item>
-
-        <Item>
-          <Desc>Album artwork for Tomorrow's Tulips pressed and printed on Burger Records label. I designed the entire LP sleeve and inside slips with accompanying photography and painting by Alex Knost.</Desc>
-        </Item>
-
-      </Grid>
-      
+      <Item>
+        <Desc>Album artwork for Tomorrow's Tulips pressed and printed on Burger Records label. I designed the entire LP sleeve and inside slips with accompanying photography and painting by Alex Knost.</Desc>
+      </Item>
     </Project>
 
     <Project tag="website">
+      <Item>
+      <QueryImage name="web_int_1" />
+      </Item>
 
-    <Grid>
-    <Item>
-    <QueryImage name="web_int_1" />
-    </Item>
-    Website for Dominic Santos. Designed with a mobile-centric experience for Instagram majority traffic.
-    </Grid>
+      <Item>
+        <Desc>Website for Dominic Santos. Designed with a mobile-centric experience for Instagram majority traffic.</Desc>
+      </Item>
     </Project>
 
     <Project tag="website">
-    Website for Diagonal Press built on the Shopify platform.
+      <Item><Desc>Website for Diagonal Press built on the Shopify platform.</Desc></Item>
     </Project>
 
     <Project tag="website">
-
-    <QueryImage name="web_int_1" />
-
-    <p>UI refresh for Intero's stationery shop</p>
+      <Item><QueryImage name="web_int_1" /></Item>
+      <Item><p>UI refresh for Intero's stationery shop</p></Item>
     </Project>
 
 
     <Project tag="website">
-    <QueryImage name="web_dom_1" />
-
-    Website for Dominic Santos. Designed with a mobile-centric experience for Instagram majority traffic.
+      <Item><QueryImage name="web_dom_1" /></Item>
+      <Item>
+        Website for Dominic Santos. Designed with a mobile-centric experience for Instagram majority traffic.
+      </Item>
     </Project>
 
     <Project>
-      <QueryImage name="we_render_1" />
-      <p>William's Electric Stationary</p>
+      <Item><QueryImage name="we_render_1" /></Item>
+      <Item><Desc>William's Electric Stationary</Desc></Item>
     </Project>
 
 
     </Layout>
-)
+)}
 
 export default IndexPage
