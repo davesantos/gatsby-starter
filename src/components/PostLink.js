@@ -1,15 +1,26 @@
 import React from "react"
 import { Link } from "gatsby"
 import Img from 'gatsby-image'
+import {
+  Project,
+  Item,
+} from "components"
 
 const PostLink = ({ post }) => (
-  <div>
+  <Project>
+
+    <Item>
+
     <Link to={post.frontmatter.path}>
 
-      <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
-      {post.frontmatter.title} ({post.frontmatter.date})
+    <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
+
+    {post.frontmatter.title} ({post.frontmatter.date})
+
     </Link>
-  </div>
+
+    </Item>
+  </Project>
 )
 
 export default PostLink
