@@ -5,4 +5,8 @@
  */
 
  // You can delete this file if you're not using it
- import "./static/fonts.css"
+
+ // import "./static/fonts.css"
+
+ require("prismjs/themes/prism-solarizedlight.css")
+ require("prismjs/plugins/command-line/prism-command-line.css")
