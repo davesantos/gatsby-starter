@@ -6,18 +6,36 @@ export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
 
+
+
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
+
+  console.log(data)
+
+  let headerTitle = 'null'
+
+  if (frontmatter.subtitle == null) {
+    headerTitle = (
+      <h1>{frontmatter.title}</h1>
+    )
+  } else {
+    headerTitle = (
+      <hgroup>
+      <h1>{frontmatter.title}</h1>
+      <h3>{frontmatter.subtitle}</h3>
+      </hgroup>
+    )
+  }
+
 
   return (
     <Layout>
 
       <SEO title={frontmatter.title}   />
 
-      <hgroup>
-        <h1>{frontmatter.title}</h1>
-        <h3>{frontmatter.subtitle}</h3>
-      </hgroup>
+      {headerTitle}
+
 
       <article>
         <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -35,6 +53,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        role
+        category
         subtitle
       }
     }
