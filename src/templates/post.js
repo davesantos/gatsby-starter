@@ -13,7 +13,7 @@ export default function Template({
 
   console.log(data)
 
-  let headerTitle = 'null'
+  let headerTitle
 
   if (frontmatter.subtitle == null) {
     headerTitle = (
@@ -22,8 +22,8 @@ export default function Template({
   } else {
     headerTitle = (
       <hgroup>
-      <h1>{frontmatter.title}</h1>
-      <h3>{frontmatter.subtitle}</h3>
+        <h1>{frontmatter.title}</h1>
+        <h3>{frontmatter.subtitle}</h3>
       </hgroup>
     )
   }
