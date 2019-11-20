@@ -10,6 +10,7 @@ import {
   PostLink,
 } from "src/components"
 
+
 const Cover = styled.section`
   padding: 5em
 `
@@ -103,6 +104,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             title
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

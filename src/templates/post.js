@@ -13,10 +13,12 @@ export default function Template({
     <Layout>
 
       <SEO title={frontmatter.title}   />
+
       <hgroup>
         <h1>{frontmatter.title}</h1>
         <h3>{frontmatter.subtitle}</h3>
       </hgroup>
+
       <article>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </article>
