@@ -5,6 +5,7 @@
  */
 
  const path = require(`path`)
+ const _ = require("lodash")
  const { createFilePath } = require(`gatsby-source-filesystem`)
 
  exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -23,7 +24,7 @@
    const { createPage } = actions
 
    const postPage = path.resolve(`src/templates/post.js`)
-
+   const tagPage = path.resolve(`src/templates/tags.js`)
    const markdownQueryResult = await graphql(`
      {
        allMarkdownRemark(
@@ -32,12 +33,21 @@
        ) {
          edges {
            node {
+             fields {
+               slug
+             }
              frontmatter {
                path
+               tags
              }
            }
          }
        }
+       tagsGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
      }
    `)
 
@@ -47,6 +57,7 @@
      return
    }
 
+   // Create post detail pages
    markdownQueryResult.data.allMarkdownRemark.edges.forEach(({ node }) => {
      createPage({
        path: node.frontmatter.path,
@@ -54,4 +65,17 @@
        context: {}, // additional data can be passed via context
      })
    })
+
+   // Make tag pages
+   const tags = markdownQueryResult.data.tagsGroup.group
+   tags.forEach(tag => {
+     createPage({
+       path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+       component: tagTemplate,
+       context: {
+         tag: tag.fieldValue,
+       },
+     })
+   })
+
  }
