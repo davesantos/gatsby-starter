@@ -23,8 +23,8 @@
  exports.createPages = async ({ actions, graphql, reporter }) => {
    const { createPage } = actions
 
-   const postPage = path.resolve(`src/templates/post.js`)
-   const tagPage = path.resolve(`src/templates/tags.js`)
+   const postPage = path.resolve(`src/templates/postPage.js`)
+   const tagPage = path.resolve(`src/templates/tagsPage.js`)
    const markdownQueryResult = await graphql(`
      {
        allMarkdownRemark(
@@ -71,7 +71,7 @@
    tags.forEach(tag => {
      createPage({
        path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
-       component: tagTemplate,
+       component: tagPage,
        context: {
          tag: tag.fieldValue,
        },
