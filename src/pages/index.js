@@ -40,11 +40,11 @@ const IndexPage = ({
 
     {Posts}
     <Project tag="print">
-      <Item position="1 /span 3">
+      <Item gridColumn="1 /span 3">
         <QueryImage name="iam_1" />
       </Item>
 
-      <Item position="span 3">
+      <Item gridColumn="span 3">
         <QueryImage name="iam_2" />
       </Item>
 
