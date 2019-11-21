@@ -1,19 +1,28 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Layout, SEO } from "components"
+import styled from "styled-components"
+
+const Section = styled.section`
+
+  padding-top: 3em
+  padding-bottom: 3em
+
+`
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
 
-
-
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
 
-  console.log(data)
-
   let headerTitle
+  let role
+
+  if (frontmatter.role) {
+    role = ( <p>Role: {frontmatter.role} </p> )
+  }
 
   if (frontmatter.subtitle == null) {
     headerTitle = (
@@ -34,8 +43,12 @@ export default function Template({
 
       <SEO title={frontmatter.title}   />
 
-      {headerTitle}
+      <Section>
 
+      {headerTitle}
+      {role}
+
+      </Section>
 
       <article>
         <div dangerouslySetInnerHTML={{ __html: html }} />
