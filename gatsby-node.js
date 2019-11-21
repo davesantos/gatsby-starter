@@ -8,6 +8,10 @@
  const _ = require("lodash")
  const { createFilePath } = require(`gatsby-source-filesystem`)
 
+/*
+  Create Slug
+  See: https://www.gatsbyjs.org/docs/creating-slugs-for-pages/
+*/
  exports.onCreateNode = ({ node, getNode, actions }) => {
    const { createNodeField } = actions
    if (node.internal.type === `MarkdownRemark`) {
@@ -22,7 +26,6 @@
 
  exports.createPages = async ({ actions, graphql, reporter }) => {
    const { createPage } = actions
-
    const postPage = path.resolve(`src/templates/postPage.js`)
    const tagPage = path.resolve(`src/templates/tagsPage.js`)
    const markdownQueryResult = await graphql(`
@@ -50,6 +53,7 @@
       }
      }
    `)
+
 
    // Handle errors
    if (markdownQueryResult.errors) {
