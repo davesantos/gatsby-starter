@@ -35,17 +35,17 @@ const IndexPage = ({
   <Layout>
     <SEO title="Home" />
 
-    {Posts}
 
     <Cover>I am a Los Angeles based designer specializing in graphic design, illustration, brand identity, web design and development.</Cover>
 
+    {Posts}
     <Project tag="print">
       <Item position="1 /span 3">
-        <QueryImage name="we_render_1" />
+        <QueryImage name="iam_1" />
       </Item>
 
       <Item position="span 3">
-        <QueryImage name="we_render_1" />
+        <QueryImage name="iam_2" />
       </Item>
 
       <Item>
@@ -54,40 +54,7 @@ const IndexPage = ({
       </Item>
     </Project>
 
-    <Project tag="website">
-      <Item>
-      <QueryImage name="web_int_1" />
-      </Item>
-
-      <Item>
-        <Desc>Website for Dominic Santos. Designed with a mobile-centric experience for Instagram majority traffic.</Desc>
-      </Item>
-    </Project>
-
-    <Project tag="website">
-      <Item><Desc>Website for Diagonal Press built on the Shopify platform.</Desc></Item>
-    </Project>
-
-    <Project tag="website">
-      <Item><QueryImage name="web_int_1" /></Item>
-      <Item><p>UI refresh for Intero's stationery shop</p></Item>
-    </Project>
-
-
-    <Project tag="website">
-      <Item><QueryImage name="web_dom_1" /></Item>
-      <Item>
-        Website for Dominic Santos. Designed with a mobile-centric experience for Instagram majority traffic.
-      </Item>
-    </Project>
-
-    <Project>
-      <Item><QueryImage name="we_render_1" /></Item>
-      <Item><Desc>William's Electric Stationary</Desc></Item>
-    </Project>
-
-
-    </Layout>
+  </Layout>
 
 )}
 
