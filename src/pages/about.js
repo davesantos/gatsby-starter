@@ -5,7 +5,7 @@ import {
   SEO
 } from "src/components"
 
-const SecondPage = () => (
+const AboutPage = () => (
 
   <Layout>
     <SEO title="About" />
@@ -15,4 +15,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default AboutPage
