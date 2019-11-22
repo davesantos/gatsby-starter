@@ -20,15 +20,13 @@ const Desc = styled.p`
 `
 
 const IndexPage = ({
-
     data: {
       allMarkdownRemark: { edges },
     },
-
 }) => {
 
   const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.weight) // You can filter your posts based on some criteria
+    // .filter(edge => !!edge.node.frontmatter.weight) // You can filter your posts based on some criteria
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
   return (
@@ -62,7 +60,10 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___weight] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___weight] },
+      filter: { fileAbsolutePath: {regex : "\/projects/"} },
+    ) {
       edges {
         node {
           id

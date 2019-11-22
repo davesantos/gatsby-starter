@@ -27,14 +27,18 @@ export default BlogPage
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___weight] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] },
+      filter: { fileAbsolutePath: {regex : "\/posts/"} },
+
+
+    ) {
       edges {
         node {
           id
           excerpt(pruneLength: 250)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
-            weight
             path
             title
             featuredImage {
