@@ -21,6 +21,7 @@ const Nav = () => (
   <TheNav>
     <Href to="/" activeStyle={aStyle}>Home</Href>
     <Href to="/about" activeStyle={aStyle}>About</Href>
+    <Href to="/blog" activeStyle={aStyle}>Blog</Href>
   </TheNav>
 )
 
