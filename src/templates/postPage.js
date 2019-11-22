@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Layout, SEO } from "components"
+import { Layout, SEO, Grid, Item   } from "components"
 import styled from "styled-components"
 
 const Section = styled.section`
@@ -44,14 +44,22 @@ export default function Template({
       <SEO title={frontmatter.title}   />
 
       <Section>
+        <Grid>
+          <Item>
+          {headerTitle}
+          {role}
 
-      {headerTitle}
-      {role}
+          </Item>
+        </Grid>
 
       </Section>
 
       <article>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <Grid>
+
+        <Item><div dangerouslySetInnerHTML={{ __html: html }} /></Item>
+
+        </Grid>
       </article>
 
     </Layout>
