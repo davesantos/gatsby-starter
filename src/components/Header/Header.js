@@ -5,22 +5,17 @@ import styled from "styled-components"
 import Grid from "../Grid"
 import Nav from "./Nav"
 
-
 const TheHeader = styled.header`
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 `
-
 const TheStyle = {
-
   fontSize: "inherit",
   fontWeight: "normal",
   margin: 0
-
 }
 
 const Header = ({ siteTitle }) => (
-
   <TheHeader>
     <Grid>
       <h1 style={TheStyle}><Link to="/" >{siteTitle}</Link></h1>
